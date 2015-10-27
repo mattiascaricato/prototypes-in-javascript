@@ -4,13 +4,17 @@ var foo = {
   lastName: 'Bleh'
 }
 
+// foo ----> Object.prototype ----> null
+
 // This syntax is approximately sugar for
 // var foo = Object.create(Object.prototype)
 // foo.firstName = 'Paul'
 // foo.lastName = 'Irish'
 
+// Returns the prototype of the specified object
 console.log(Object.getPrototypeOf(foo))
 
+// Returns an array of all properties
 console.log(Object.getOwnPropertyNames(Object.prototype))
 
 // Object.getOwnPropertyNames(Object.prototype)
@@ -27,7 +31,7 @@ console.log(Object.getOwnPropertyNames(Object.prototype))
 //   '__lookupSetter__',
 //   '__proto__' ]
 
-console.log(john.toString()) // '[object Object]'
+console.log(foo.toString()) // '[object Object]'
 
 var john = {
   firstName: 'John',
