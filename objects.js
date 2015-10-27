@@ -1,10 +1,10 @@
-// Creating an empty object
+// Creates an empty object
 var person = Object.create(null)
 
 person.name // undefined
 person.coolMethod() // undefined is not a function
 
-// Adding some properties
+// Adds some properties
 person.firstName = 'John'
 person['lastName'] = 'Doe'
 
@@ -12,7 +12,7 @@ var propertyKey = 'ag'
 
 person[propertyKey + 'e'] = 40
 
-// Adding methods
+// Adds methods
 person.fullName = function () {
   return this.firstName + ' ' + this.lastName
 }
